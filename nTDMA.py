@@ -1,6 +1,6 @@
 print("\n \t\t TDMA Solver\n")
 print("\nRefer the nTDMA.pdf for the general form of TriDiagonal Matrix Algorithm with n unknowns\n")
-n = int(input("\nEnter the number of unknowns (n): "))
+n = int(input("\nEnter the number of unknowns (n):   "))
 
 # create zeros list/array as per user input
 D = [0]*n  # diagonal element
@@ -13,16 +13,13 @@ X = [0]*n  # final answer array
 
 # input element values from user
 for i in range(0, n):
-    D[i] = float(
-        input("\nEnter Diagonal {} value D{}:    ".format((i+1), (i+1))))
+    D[i] = float(input("\nEnter Diagonal {} value D{}:   ".format((i+1), (i+1))))
 
 for i in range(0, n-1):
-    alpha[i] = float(
-        input("\nEnter value of \N{GREEK SMALL LETTER ALPHA}{}:    " .format(i+1)))
+    alpha[i] = float(input("\nEnter value of \N{GREEK SMALL LETTER ALPHA}{}:   " .format(i+1)))
 
 for i in range(1, n):
-    beta[i] = float(
-        input("\nEnter value of \N{GREEK SMALL LETTER BETA}{}:    ".format(i+1)))
+    beta[i] = float(input("\nEnter value of \N{GREEK SMALL LETTER BETA}{}:   ".format(i+1)))
 
 
 # input value of constant from the user
