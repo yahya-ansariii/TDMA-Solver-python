@@ -1,3 +1,17 @@
+'''   Copyright 2021 MOHAMMED YAHYA ANASRI
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+'''
 print("\n \t\t\t TDMA Solver\n")
 print("\n\tRefer the nTDMA.pdf for the general form of TriDiagonal Matrix Algorithm with n unknowns\n")
 n = int(input("\n\tEnter the number of unknowns (n):   "))
