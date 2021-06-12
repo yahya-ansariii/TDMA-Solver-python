@@ -22,23 +22,23 @@ To learn Python programming and use python packages.
 ## Output
 User input data :
 
-![input](/outputimages/input.png)
+![input](outputimages/input.PNG)
 
 Solution which is printed in tabular form :
 
-![table](/outputimages/table.png)
+![table](outputimages/table.PNG)
 
 If user input invalid option :
 
-![invalid](/outputimages/invalid.png)
+![invalid](outputimages/invalid.PNG)
 
 If user input y :
 
-![export to excel](/outputimages/y.png)
+![export to excel](outputimages/y.PNG)
 
 If user input q :
 
-![quit without export](/outputimages/q.png)
+![quit without export](outputimages/q.PNG)
 
 _**Note** : The example showed in [nTDMA.pdf](nTDMA.pdf) was solved manually using the calculator and the appropriate formula by forward and back substitution._
 
