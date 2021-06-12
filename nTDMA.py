@@ -1,4 +1,4 @@
-'''   Copyright 2021 MOHAMMED YAHYA ANASRI
+'''   Copyright 2021 MOHAMMED YAHYA ANSARI
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -12,6 +12,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 '''
+import pandas as pd
 print("\n \t\t\t TDMA Solver\n")
 print("\n\tRefer the nTDMA.pdf for the general form of TriDiagonal Matrix Algorithm with n unknowns\n")
 n = int(input("\n\tEnter the number of unknowns (n):   "))
@@ -49,11 +50,6 @@ for i in range(0, n):
     A[i] = alpha[i]/(D[i] - beta[i]*A[i-1])
     C[i] = (beta[i]*C[i-1] + c[i])/(D[i] - beta[i]*A[i-1])
 
-# print the input values and intermediate terms
-for i in range(0, n):
-    print("\t D%d = %f \t \N{GREEK SMALL LETTER BETA}%d = %f \t \N{GREEK SMALL LETTER ALPHA}%d = %f \t C%d = %f \t A%d = %f \t C'%d = %f \n" % (
-        i+1, D[i], i+1, beta[i], i+1, alpha[i], i+1, c[i], i+1, A[i], i+1, C[i]))
-
 # Calculation of final values to get the solution
 
 X[n-1] = C[n-1]  # equating the last X term for backward substitution
@@ -62,8 +58,31 @@ while j >= 0:
     X[j] = A[j] * X[j+1] + C[j]
     j = j-1
 
-print("\n\n\tThe X values are:\n")
-for i in range(0, n):
-    print("\t\t X%d = %f  \n" % (i+1, X[i]))
+#Create data for Pandas DataFrame
+OUTPUT = list(zip(beta , D , alpha , c , A , C , X))
+#create Pandas DataFrame
+result = pd.DataFrame(data = OUTPUT, columns = ["\N{GREEK SMALL LETTER BETA}","Diagonal (D)","\N{GREEK SMALL LETTER ALPHA}","Constants","A","C'","X" ])
+#Change index to 1,2,3,.....
+result.index = result.index + 1
+print(result)
+
+#export result ot excel sheet
+export = ""
+while export != "q":
+    print("\n\n\t[ y ] Enter y to export the table to nTDMA.xlsx\n\n\t[ q ] Enter q to exit without exporting\n\n")
+    export = input("Enter your choice :\t")
+
+    if (export == "y"):
+        result.insert(0, 'Sr.No.', range(1, 1 + len(result))) #add serial no  column at the start of the DataFrame
+        result.to_excel('nTDMA.xlsx', sheet_name = 'Output', index = False) #.to_excel to export excel file
+        print("\n\n*************** Export to nTDMA.xlsx complete. ***************\n\n")
+        break
+
+    elif (export == "q"):
+        print("\n\n***** Result not exported to excel. *****\n\n")
+        break
+    
+    else : print("\n\t\tInvalid Choice, Try again!")
+
 # to hold output screen
 input()

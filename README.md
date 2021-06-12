@@ -13,11 +13,32 @@ At the end of the code input() is used to hold the screen, just press enter to e
 To learn Python programming and use python packages.
 
 ## Dependencies
-[Python](https://python.org) 3.9.5
+- [Python](https://python.org) 3.9.5
+
+- [Pandas](https://pandas.pydata.org) 1.2.4
+
+- [Openpyxl](https://openpyxl.readthedocs.io) 3.0.7
 
 ## Output
+User input data :
 
-![output](output.PNG)
+![input](/outputimages/input.png)
+
+Solution which is printed in tabular form :
+
+![table](/outputimages/table.png)
+
+If user input invalid option :
+
+![invalid](/outputimages/invalid.png)
+
+If user input y :
+
+![export to excel](/outputimages/y.png)
+
+If user input q :
+
+![quit without export](/outputimages/q.png)
 
 _**Note** : The example showed in [nTDMA.pdf](nTDMA.pdf) was solved manually using the calculator and the appropriate formula by forward and back substitution._
 
