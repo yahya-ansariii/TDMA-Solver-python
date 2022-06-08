@@ -6,6 +6,10 @@ All the variables used in python code are similar to the general form.
 User must input the data as per the general form.
 The python code has all the necessary comments to understand the tridiagonal matrix algorithm.
 
+Click on the following link to checkout the video to easily use this python code.
+
+- [YOUTUBE](https://youtu.be/IbjNYqMF_cI)
+
 _**Note** : The TDMA or Thomas algorithm solves any kind of tridiagonal matrices._
 At the end of the code input() is used to hold the screen, just press enter to exit the code.
 
